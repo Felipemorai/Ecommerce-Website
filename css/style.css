@@ -31,6 +31,10 @@ body {
     width: 100%;
 }
 
+section {
+    padding: 4rem 0 3rem;
+}
+
 /* Header */
 header {
     position: fixed;
@@ -57,4 +61,14 @@ header {
 #cart-icon {
     font-size: 1.8rem;
     cursor: pointer;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.shop {
+    margin-top: 2rem;
 }
