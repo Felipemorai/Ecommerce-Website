@@ -101,6 +101,35 @@ header {
     margin-top: 1rem;
 }
 
+.cart-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-title {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.cart-price {
+    font-weight: 500;
+}
+
+.cart-quantity {
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
 .section-title {
     font-size: 1.5rem;
     font-weight: 600;
