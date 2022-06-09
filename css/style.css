@@ -65,13 +65,13 @@ header {
 }
 
 #cart-icon:hover {
-    position: ;
-    font-size: 1.5rem;
-    padding: 3px;
-    border: 1px solid var(--text-color);
-    transition: 0.4s;
-    border-radius: 50%;
+    background: #171427;
+    color: #fff;
     cursor: pointer;
+    padding: 1.5px;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    transition: 0.4s ease-out;
 }
 
 .section-title {
@@ -129,4 +129,9 @@ header {
     padding: 10px;
     cursor: pointer;
     margin: 10px;
+}
+
+.add-cart:hover {
+    background: rgb(49, 59, 68);
+    
 }
