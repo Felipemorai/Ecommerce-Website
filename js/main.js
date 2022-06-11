@@ -19,12 +19,18 @@ else {
     ready();
 }
 
-/* Remove items from cart */
+/* Remove Items From Cart */
 function ready() {
     var removeCartButtons = document.getElementsByClassName('cart-remove')
     console.log(removeCartButtons);
     for (var i = 0; i < removeCartButtons.length; i++) {
-        var button = removeCartButtons[1];
+        var button = removeCartButtons[1]
         button.addEventListener('click', removeCartItem)
     }
+}
+
+/* Remove Items From Cart */
+function removeCartItem(event) {
+    var buttonClicked = event.target
+    buttonClicked.parentElement.remove();
 }
