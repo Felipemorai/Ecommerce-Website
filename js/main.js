@@ -27,6 +27,12 @@ function ready() {
         var button = reomveCartButtons[i]
         button.addEventListener('click', removeCartItem)
     }
+    /* Quantity Changes */
+    var quantityInputs = document.getElementsByClassName('cart-quantity')
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i]
+        input.addEventListener('change', quantityChanged);
+    }
 }
 
 /* Remove Items From Cart */
@@ -34,6 +40,14 @@ function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.remove();
     updatetotal();
+}
+
+/* Quantity Changes */
+function quantityChanged(event) {
+    var input = event.target
+    if (NaN(input.value) || input.value <= 0) {
+        input.value = 1;
+    }
 }
 
 /* Update Total */
