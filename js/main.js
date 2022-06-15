@@ -45,9 +45,10 @@ function removeCartItem(event) {
 /* Quantity Changes */
 function quantityChanged(event) {
     var input = event.target
-    if (NaN(input.value) || input.value <= 0) {
+    if (isNaN(input.value) || input.value <= 0) {
         input.value = 1;
     }
+    updatetotal();
 }
 
 /* Update Total */
@@ -62,6 +63,8 @@ function updatetotal() {
         var price = parseFloat(priceElement.innerText.replace("$", ""));
         var quantity = quantityElement.value;
         total = total + (price * quantity);
+        /* Rounding Numbers Values */
+        total = Math.round(total * 100) / 100;
 
         document.getElementsByClassName('total-price')[0].innerText = "$" + total;
     }
