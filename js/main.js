@@ -78,6 +78,18 @@ function addProductToCart(title, price, productImg) {
     }
 }
 
+var cartBoxContent = `
+<img src="img/product2.jpg" alt="" class="cart-img">
+<div class="detail-box">
+    <div class="cart-product-title">
+        Earbuds
+    </div>
+    <div class="cart-price">$24.99</div>
+    <input type="number" value="1" class="cart-quantity">
+</div>
+<i class="bx bxs-trash-alt cart-remove"></i>
+`
+
 /* Update Total */
 function updatetotal() {
     var cartContent = document.getElementsByClassName('cart-content')[0];
