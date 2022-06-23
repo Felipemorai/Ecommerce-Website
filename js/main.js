@@ -74,10 +74,12 @@ function addProductToCart(title, price, productImg) {
     var cartItems = document.getElementsByClassName('cart-content')[0];
     var cartItemsNames = cartItems.getElementsByClassName('cart-product-title');
     for (var i = 0; i < cartItemsNames.length; i++) {
-        alert("You have already add this item to cart");
-        return;
+        if (cartItemsNames[i].innerText == title) {
+            alert("You have already add this item to cart");
+            return;
+        }
+    
     }
-}
 
 var cartBoxContent = `
 <img src="img/product2.jpg" alt="" class="cart-img">
@@ -88,12 +90,13 @@ var cartBoxContent = `
     <div class="cart-price">$24.99</div>
     <input type="number" value="1" class="cart-quantity">
 </div>
-<i class="bx bxs-trash-alt cart-remove"></i>
-`;
+<i class="bx bxs-trash-alt cart-remove"></i>`;
+
 cartShopBox.innerHTML = cartBoxContent;
 cartItems.append(cartShopBox);
 cartShopBox.getElementsByClassName('cart-remove')[0].addEventListener("click", removeCartItem);
 cartShopBox.getElementsByClassName('cart-quantity')[0].addEventListener("change", quantityChanged);
+}
 
 /* Update Total */
 function updatetotal() {
