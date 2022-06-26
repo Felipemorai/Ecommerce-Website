@@ -244,3 +244,51 @@ header {
 .add-cart:hover {
     background: rgb(49, 59, 68);
 }
+
+/* Breakpoints / Making Responsive */
+@media (max-width: 1080px) {
+    .nav {
+        padding: 15px;
+    }
+
+    section {
+        padding: 3rem 0 2rem;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .shop {
+        padding-top: 5rem !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav {
+        padding: 11px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .cart {
+        width: 320px;
+    }
+
+    .shop {
+        padding-top: 4.5rem !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .shop {
+        padding-top: 4.5rem !important;
+    }
+
+    .cart {
+        width: 280px;
+    }
+}
